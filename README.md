@@ -9,9 +9,9 @@ MapReduce-based Video Summarization System
 
 * Repository：
 
-    1.  VideoLibarary: .cpp + openCV
+    1.  VideoLibarary: .cpp + openCV project
 
-    1.  VideoMapreduce: .java
+    1.  VideoMapreduce: .java project
 
 
 ### How do I get set up? ###
