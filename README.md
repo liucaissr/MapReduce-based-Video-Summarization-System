@@ -7,6 +7,8 @@ This README would normally document whatever steps are necessary to get your app
 
 MapReduce-based Video Summarization System
 
+* Repository：
+
     1.  VideoLibarary: .cpp + openCV
 
     1.  VideoMapreduce: .java
