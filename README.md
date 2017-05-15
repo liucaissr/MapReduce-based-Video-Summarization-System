@@ -3,14 +3,14 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Quick summary ：MapReduce-based Video Summarization System
+* Quick summary ：
 
-VideoLibarary: .cpp + openCV
+MapReduce-based Video Summarization System
 
-VideoMapreduce: .java
+    1.  VideoLibarary: .cpp + openCV
 
-* Version 
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+    1.  VideoMapreduce: .java
+
 
 ### How do I get set up? ###
 
