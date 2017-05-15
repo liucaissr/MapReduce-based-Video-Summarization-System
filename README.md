@@ -5,6 +5,10 @@ This README would normally document whatever steps are necessary to get your app
 
 * Quick summary ：MapReduce-based Video Summarization System
 
+VideoLibarary: .cpp + openCV
+
+VideoMapreduce: .java
+
 * Version 
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
