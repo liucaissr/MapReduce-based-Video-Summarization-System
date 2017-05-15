@@ -17,6 +17,7 @@ MapReduce-based Video Summarization System
 ### How do I get set up? ###
 
 * Configuration 
+
 Hadoop-2.7.0 
 OpenCV2
 Jdk 1.8.0
