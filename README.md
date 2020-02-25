@@ -24,7 +24,7 @@ Jdk 1.8.0
 
 ### Contribution guidelines ###
 
-* Code review
+#### Code review
 
     1. OpenCV+C++: 
 
@@ -35,29 +35,16 @@ Jdk 1.8.0
         Enable the VideoMapreduce(java project) to call the video summary library built from from VideoSummaryLib (C++ project).
 
     1. Hadoop Mapreduce: 
-
+    
         Operates video with big data using Mapreduce programming model on Hadoop platform.
 
-        3.1 Map: 
+        1. Map: parallel processing the video summary on the video split on each block.
 
-        parallel processing the video summary on the video split on each block.
+            <filename, file frameoffset> -> <filename, list of (frameoffset +summarized files)>
 
-        <filename, file frameoffset> -> <filename, list of (frameoffset +summarized files)>
+        1. Reduce: combine the summarized video files of the splits with the same filename.
 
-        3.2 Reduce:
+            <filename, list of (frameoffset +summarized files)> -> <filename, result summary file>
 
-        Combine the summarized video files of the splits with the same filename.
+        1. VideoInputFormat: Override the FileInputFormat class in Hadoop in order to keep the completeness of the video processing unit in the videoSummaryLib .
 
-        <filename, list of (frameoffset +summarized files)> -> <filename, result summary file>
-
-        3.3 VideoInputFormat:
-
-        Override the FileInputFormat class in Hadoop in order to keep the completeness of the video processing unit in the videoSummaryLib .
-
-
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
