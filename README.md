@@ -26,25 +26,25 @@ Jdk 1.8.0
 
 #### Code review
 
-    1. OpenCV+C++: 
+1. OpenCV+C++: 
 
-        Processing the video file, calculate and obtain the video shot based on a certain threshold, generate a summary video with all the key frames (shot) of the video.
+    Processing the video file, calculate and obtain the video shot based on a certain threshold, generate a summary video with all the key frames (shot) of the video.
 
-    1. JNI:
+1. JNI:
 
-        Enable the VideoMapreduce(java project) to call the video summary library built from from VideoSummaryLib (C++ project).
+    Enable the VideoMapreduce(java project) to call the video summary library built from from VideoSummaryLib (C++ project).
 
-    1. Hadoop Mapreduce: 
-    
-        Operates video with big data using Mapreduce programming model on Hadoop platform.
+1. Hadoop Mapreduce: 
 
-        1. Map: parallel processing the video summary on the video split on each block.
+    Operates video with big data using Mapreduce programming model on Hadoop platform.
 
-            <filename, file frameoffset> -> <filename, list of (frameoffset +summarized files)>
+    1. Map: parallel processing the video summary on the video split on each block.
 
-        1. Reduce: combine the summarized video files of the splits with the same filename.
+        <filename, file frameoffset> -> <filename, list of (frameoffset +summarized files)>
 
-            <filename, list of (frameoffset +summarized files)> -> <filename, result summary file>
+    1. Reduce: combine the summarized video files of the splits with the same filename.
 
-        1. VideoInputFormat: Override the FileInputFormat class in Hadoop in order to keep the completeness of the video processing unit in the videoSummaryLib .
+        <filename, list of (frameoffset +summarized files)> -> <filename, result summary file>
+
+    1. VideoInputFormat: Override the FileInputFormat class in Hadoop in order to keep the completeness of the video processing unit in the videoSummaryLib .
 
